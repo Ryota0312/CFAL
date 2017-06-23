@@ -1,0 +1,5 @@
+collect_file_access_log.service
+collect_file_access_log.sh
+access_log*
+error*
+config.sh
