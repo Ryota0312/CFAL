@@ -1,3 +1,6 @@
+I modified to make CFAL available on Linux.
+Original CFAL made by ikeda-yuko: https://github.com/ikeda-yuko/CFAL
+
 # environment
 
   + install inotify-tools
