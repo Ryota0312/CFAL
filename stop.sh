@@ -1,4 +1,4 @@
-if [ "$(expr substr $(uname -s) 1 5)" == 'Linux' ]; then
+if [ "$(uname -s)" == 'Linux' ]; then
     # for Linux
     systemctl --user stop collect_file_access_log.service
     systemctl --user disable collect_file_access_log.service
