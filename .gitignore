@@ -3,3 +3,4 @@ collect_file_access_log.sh
 access_log*
 error*
 config.sh
+collect_file_access_log.plist
