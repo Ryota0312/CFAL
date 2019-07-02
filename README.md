@@ -1,57 +1,73 @@
-I modified to make CFAL available on Linux.
+本ツールは，ホームディレクトリ以下のファイルアクセス履歴を収集するためのものである．  
 Original CFAL made by ikeda-yuko: https://github.com/ikeda-yuko/CFAL
 
-# environment
+# Install fswatch
++ https://github.com/emcrisostomo/fswatch
 
-  + install inotify-tools
-    ```
-    $ sudo apt-get install inotify-tools
-    ```
+## Linux
+1. `$ wget https://github.com/emcrisostomo/fswatch/releases/download/1.14.0/fswatch-1.14.0.tar.gz`
+2. `$ tar -zxvf fswatch-1.14.0.tar.gz`
+3. `$ cd fswatch-1.14.0`
+4. `$ ./configure`
+5. `$ make`
+6. `$ sudo make install`
+7. `$ sudo ldconfig`
 
-  + make dir if you don't have
+## Mac OS X
+```
+# MacPorts
+$ port install fswatch
+	
+# Homebrew
+$ brew install fswatch
+```
 
-    ```
-    $ mkdir ~/.config/systemd/user
-    ```
+# Install CFAL
 
-# start CFAL at Linux
+1. clone this repository
 
-  + clone this repository
-    ```
-    $ git clone git@github.com:Ryota0312/CFALforLinux.git
-    ```
+```
+$ git clone git@github.com:Ryota0312/CFALforLinux.git
+```
 
-  + copy and modiry config file
+2. copy and modiry config file
+   
+```
+$ cp config.sample.sh config.sh
+```
 
-    ```
-    $ cp config.sample.sh config.sh
-    ```
+example
 
-    example
+```
+export YOUR_CFAL_DIR="/Users/yamada/Projecs"
+export YOUR_HOME_DIR="/Users/yamada"
+export YOUR_IGNORE_FILE=("\/Users\/yamada\/Library\/.*" "\/Users\/yamada\/todo.org"
+```
 
-    ```
-    export YOUR_CFAL_DIR="/Users/yamada/Projecs"
-    export YOUR_HOME_DIR="/Users/yamada"
-    export YOUR_IGNORE_FILE=("\/Users\/yamada\/Library\/.*" "\/Users\/yamada\/todo.org"
-    ```
+3. Make dir if you don't have (**only for Linux!**)
 
-  + initialize
-    execute initialize.sh
-    ```
-    $ ./initialize.sh
-    ```
+```
+$ mkdir ~/.config/systemd/user
+```
 
-  + Enable and Start
+4. initialize
 
-     ```
-     $ ./start.sh
-     ```
+execute initialize.sh
+```
+$ ./initialize.sh
+```
 
-# stop and restart CFAL
+5. Enable and Start
+
+```
+$ ./start.sh
+```
+
+# Stop and Restart
 
  ```
  $ ./stop.sh
- ```
+```
 
  or
 
