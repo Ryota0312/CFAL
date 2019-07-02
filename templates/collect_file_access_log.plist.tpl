@@ -16,7 +16,7 @@
 
         <!-- Specify a standard error file -->
         <key>StandardErrorPath</key>
-        <string>your_CFAL_path/error</string>
+        <string>your_CFAL_path/error_log</string>
 
         <key>KeepAlive</key>
         <true/>
