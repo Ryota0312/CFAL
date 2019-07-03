@@ -27,7 +27,8 @@ $ brew install fswatch
 1. clone this repository
 
 ```
-$ git clone git@github.com:Ryota0312/CFALforLinux.git
+$ git clone git@github.com:Ryota0312/CFAL.git
+$ cd CFAL
 ```
 
 2. copy and modiry config file
@@ -39,9 +40,9 @@ $ cp config.sample.sh config.sh
 example
 
 ```
-export YOUR_CFAL_DIR="/Users/yamada/Projecs"
-export YOUR_HOME_DIR="/Users/yamada"
-export YOUR_IGNORE_FILE=("\/Users\/yamada\/Library\/.*" "\/Users\/yamada\/todo.org"
+export YOUR_CFAL_DIR="/home/yamada/Projecs"
+export YOUR_HOME_DIR="/home/yamada"
+export YOUR_IGNORE_FILE='--exclude "/home/yamada/ignore_path/.*" --exclude "/home/yamada/exclude_path/.*"'
 ```
 
 3. Make dir if you don't have (**only for Linux!**)
