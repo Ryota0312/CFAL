@@ -11,7 +11,7 @@ fi
 
 source config.sh
 
-sed -e "s&your_CFAL_path&${YOUR_CFAL_DIR}&g" templates/collect_file_access_log.sh.tpl | sed -e "s&your_home_dir&${YOUR_HOME_DIR}&g" > collect_file_access_log.sh
+sed -e "s&your_CFAL_path&${YOUR_CFAL_DIR}&g" templates/collect_file_access_log.sh.tpl | sed -e "s&your_home_dir&${YOUR_HOME_DIR}&g" | sed -e "s&your_ignore_list&${YOUR_IGNORE_LIST}&g" > collect_file_access_log.sh
 
 if [ "$(uname -s)" == 'Linux' ]; then
     # for Linux
