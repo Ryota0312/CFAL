@@ -5,6 +5,10 @@ Original CFAL made by ikeda-yuko: https://github.com/ikeda-yuko/CFAL
 + https://github.com/emcrisostomo/fswatch
 
 ## Linux
+1. `$ sudo apt install fswatch`
+
+aptでインストールできない場合，
+
 1. `$ wget https://github.com/emcrisostomo/fswatch/releases/download/1.14.0/fswatch-1.14.0.tar.gz`
 2. `$ tar -zxvf fswatch-1.14.0.tar.gz`
 3. `$ cd fswatch-1.14.0`
