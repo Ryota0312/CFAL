@@ -44,7 +44,7 @@ $ cp config.sample.sh config.sh
 example
 
 ```
-export YOUR_CFAL_DIR="/home/yamada/Projecs"
+export YOUR_CFAL_DIR="/home/yamada/Projects/CFAL"
 export YOUR_HOME_DIR="/home/yamada"
 export YOUR_IGNORE_FILE='--exclude "/home/yamada/ignore_path/.*" --exclude "/home/yamada/exclude_path/.*"'
 ```
