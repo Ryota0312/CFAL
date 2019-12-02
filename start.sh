@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ "$(uname -s)" == 'Linux' ]; then
     # for Linux
     systemctl --user enable collect_file_access_log.service

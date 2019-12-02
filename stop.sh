@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ "$(uname -s)" == 'Linux' ]; then
     # for Linux
     systemctl --user stop collect_file_access_log.service
