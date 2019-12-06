@@ -79,3 +79,15 @@ $ ./start.sh
  ```
  $ ./restart.sh
  ```
+
+# トラブルシューティング
++ Linux で「inotify_add_watch: デバイスに空き領域がありません」というエラーが出る場合
+
+`/proc/sys/fs/inotify/max_user_watches` の値が小さいことが原因で発生している．
+
+1. `$ sudo emacs /etc/sysctl.conf`
+
+`fs.inotify.max_user_watches = XXXXXX` を追記．`XXXXXX` はホームディレクトリ以下のファイル数程度が良いはず．
+
+2. `sudo /sbin/sysctl -p`
+
